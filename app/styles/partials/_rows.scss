@@ -1,0 +1,27 @@
+.row {
+
+	padding: $space 0em;
+
+	// ------------------------------------
+	// Defaults
+	// ------------------------------------
+
+	.row-default {
+
+		@include columns(8,2);
+
+		.row-title { }
+
+		.row-text { margin-top: 1em; }
+
+		.row-buttons { margin-top: 1em; }
+
+	}
+
+}
+
+.lightbg { background-color: #fff; }
+.darkbg  { background-color: $baseColor; }
+
+.lightbg + .lightbg { padding-top: 0; }
+.darkbg + .darkbg { padding-top: 0; }

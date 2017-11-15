@@ -1,0 +1,26 @@
+//
+// Global Settigns
+// --------------------------------------------------
+
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	@include container()
+}
+
+.error {
+	color: $errorColor; 
+}
+
+.success { 
+	color: $successColor; 
+}
+
+
+.split-main { @include columns(8); }
+
+.split-aside { @include columns(4); }
+
+.wysiwyg { padding: $space 0em; }

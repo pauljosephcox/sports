@@ -1,0 +1,16 @@
+// ------------------------------------
+// Partial: Header
+// ------------------------------------
+
+header.default {
+
+	height: 100vh;
+
+	.header-content {
+
+		@include center-vertically();
+		@include columns(8,2);
+
+	}
+
+}
