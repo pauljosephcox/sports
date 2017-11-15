@@ -1,0 +1,22 @@
+.activity-card {
+
+	background-color: $baseColor;
+	margin-bottom: 1em;
+	padding: 1em;
+	@include columns(12);
+
+	transition: $transition;
+	box-shadow: $shadow;
+	transform: scale3d(1,1,1) translateY(0em);
+	position: relative;
+	z-index: 1;
+
+	&:hover {
+
+		box-shadow: $shadowHover;
+		transform: scale3d(1.01,1.05,1.05) translateY(-5px);
+		z-index: 2;
+
+	}
+
+}
