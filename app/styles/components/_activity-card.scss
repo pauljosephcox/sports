@@ -4,15 +4,12 @@
 	width: 100%;
 	background-color: $white;
 	border-radius: 0.15em;
-
-	margin-bottom: 1em;
-	padding: 1em;
-
 	transition: $transition;
 	box-shadow: $shadow;
 	transform: scale3d(1,1,1) translateY(0em);
 	position: relative;
 	z-index: 1;
+	margin-bottom: 1em;
 
 	&:hover {
 
@@ -21,5 +18,48 @@
 		z-index: 2;
 
 	}
+
+	// when
+	.when {
+
+		color: $grey;
+		font-size: 0.75em;
+		border-bottom: 1px solid $midGrey;
+		padding: 1em 1.25em;
+
+	}
+
+	// Content
+	.content {
+
+		padding: 1em;
+
+		// School
+		.school {
+
+			border: 1px solid $midGrey;
+			background-color: $baseColor;
+			float: left;
+			width: 100%;
+
+			.image {
+
+				@include columns(4,0,0);
+				img { width: 100%; height: auto; }
+
+			}
+
+			.info {
+
+				@include columns(8,0,0);
+
+
+			}
+
+		}
+
+	}
+
+
 
 }

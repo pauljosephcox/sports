@@ -1,5 +1,4 @@
-<div class="when">
-    <span class="{{actionIcon}}"></span> {{date}} • {{time}}</div>
+<div class="when"><span class="{{actionIcon}}"></span> {{date}} • {{time}}</div>
 
 <div class="content">
 
@@ -18,13 +17,17 @@
 
     <div class="school">
 
-        [img]
-        [school details]
-        <img src="{{school_image}}">
+        <div class="image"><img src="{{school_image}}"></div>
 
-        <p><strong>{{activity.program.college.name}}</strong></p>
-        <p><strong>Location:</strong>{{activity.program.city}},{{activity.program.state}}</p>
-        <p><a href="#">View School Profile</a></p>
+        <div class="info">
+
+            <p><strong>{{activity.program.college.name}}</strong></p>
+
+            <p><strong>Location:</strong>{{activity.program.city}},{{activity.program.state}}</p>
+
+            <p><a href="#">View School Profile</a></p>
+
+        </div>
 
     </div>
 
