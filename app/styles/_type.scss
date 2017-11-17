@@ -39,10 +39,7 @@
 	@include font-size(16);
 }
 
-@mixin p {
-	@include paragraph-font();
-	@include font-size(16);
-}
+
 
 body {
 	color: $textColor;
@@ -92,16 +89,35 @@ h6 {
 // -------------------
 
 p {
-	@include p();
 	margin: 1em 0;
 }
 
 a {
 	color: $primaryColor;
 	text-decoration: none;
+	font-weight: bold;
+	position: relative;
+
+	&:after {
+		content: "";
+		position: absolute;
+		transform: scale3d(0, 1, 1);
+		height: 1px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -4px;
+		transition: transform 0.5s cubic-bezier(0.33, 0, 0.19, 1);
+		transform-origin: right;
+		background-color: $primaryColor;
+	}
 
 	&:hover {
 		text-decoration: none;
+		&:after {
+			transform-origin: left;
+			transform: scale3d(1, 1, 1);
+		}
 	}
 }
 

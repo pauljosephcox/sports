@@ -17,13 +17,23 @@
 
     <div class="school">
 
-        <div class="image"><img src="{{school_image}}"></div>
+        <div class="image">
+
+            <div class="wrap"><img src="{{school_image}}"></div>
+
+        </div>
 
         <div class="info">
 
             <p><strong>{{activity.program.college.name}}</strong></p>
 
-            <p><strong>Location:</strong>{{activity.program.city}},{{activity.program.state}}</p>
+            <p>
+
+                <strong>Location:</strong> {{activity.program.city}},{{activity.program.state}}<br>
+
+                <strong>Division:</strong> {{activity.program.division.name}}
+
+            </p>
 
             <p><a href="#">View School Profile</a></p>
 

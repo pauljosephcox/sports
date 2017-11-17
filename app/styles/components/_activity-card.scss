@@ -60,18 +60,23 @@
 
 			.image {
 
-				@include columns(4,0,0);
+				@include columns(4.5,0,0);
 				background-color: $white;
 				border-right: 1px solid $midGrey;
+				position: relative;
 				img { width: 100%; height: auto; }
+
+				// .wrap { @include center-vertically();  }
 
 			}
 
 			.info {
 
-				@include columns(8,0,0);
+				@include columns(6.5,0,0);
 
 				padding: 0em 1em;
+				font-size: 0.85em;
+				line-height: 150%;
 			}
 
 		}
