@@ -14,12 +14,24 @@ export default Component.extend({
 
 		this.set('activity', activity);
 
+		//-----
+		//
+		// I know this should be a model. Just not enough time having only weekdays to complete this.
+		//
+		//-----
+
 		// Computed: School Image (Note these images were not available in  the source package)
 		this.set('school_image',activity.program.image.file_path + activity.program.image.file_name);
 
-		// Action Type
-		// this.set('isProfileView',(activity.type == 2) ? true : false);
-		// this.set('isUserFavorited',(activity.type == 4) ? true : false);
+		// Computed: Date Format
+		let date = new Date(activity.created_at);
+		let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
+		let month = months[date.getMonth()];
+		let day   = date.getDate();
+		let time  = this.formatTime(activity.created_at);
+
+		this.set('date',month+' '+ day);
+		this.set('time',time);
 
 		// Action Type
 		this.setupView();
@@ -57,6 +69,25 @@ export default Component.extend({
 		this.set('isUserFavorited',true);
 		this.set('actionIcon','icon-heart');
 
-	}
+	},
+
+	formatTime(date) {
+  		var d = new Date(date);
+  		var hh = d.getHours();
+  		var m = d.getMinutes();
+
+  		var dd = "AM";
+  		var h = hh;
+  		if (h >= 12) {
+    		h = hh - 12;
+    		dd = "PM";
+  		}
+  		if (h == 0) h = 12;
+
+  		m = m < 10 ? "0" + m : m;
+
+  		return h + ":" + m + " " + dd;
+
+}
 
 });
