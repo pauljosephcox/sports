@@ -12,8 +12,14 @@
 
 body { background-color: $baseColor; }
 
-section { padding: $space; }
+section {
+	padding: $space;
+	@include respond-to('mobile'){ padding: 2em 0em; }
+}
 
 .activities-feed {
-	@include columns(8,2);
+	@include columns(10,1);
+	@include responsive-columns('desktop',8,2);
+	@include responsive-columns('tablet',12);
+	@include responsive-columns('mobile',1);
 }

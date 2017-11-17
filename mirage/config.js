@@ -64,7 +64,7 @@ export default function() {
             "image": {
                 "id": 34362,
                 "file_path": "/assets/img/",
-                "file_name": "fitchburg-state-logo.jpg"
+                "file_name": "FitchburgStateLogo.jpg"
             }
         },
         "target_user": {
@@ -198,7 +198,7 @@ export default function() {
             "image": {
                 "id": 34362,
                 "file_path": "/assets/img/",
-                "file_name": "fitchburg-state-logo.jpg"
+                "file_name": "FitchburgStateLogo.jpg"
             }
         },
         "target_user": {
@@ -332,7 +332,7 @@ export default function() {
             "image": {
                 "id": 34362,
                 "file_path": "/assets/img/",
-                "file_name": "fitchburg-state-logo.jpg"
+                "file_name": "FitchburgStateLogo.jpg"
             }
         },
         "target_user": {
@@ -477,7 +477,7 @@ export default function() {
             "image": {
                 "id": 34362,
                 "file_path": "/assets/img/",
-                "file_name": "fitchburg-state-logo.jpg"
+                "file_name": "FitchburgStateLogo.jpg"
             }
         },
         "target_user": {

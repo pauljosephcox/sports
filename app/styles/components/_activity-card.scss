@@ -84,8 +84,15 @@
 				border-right: 1px solid $midGrey;
 				position: relative;
 				img { width: 100%; height: auto; }
+				@include respond-to('mobile'){ border-right: 0px; }
 
-				// .wrap { @include center-vertically();  }
+				.wrap {
+
+					padding: 3em 5em;
+					@include respond-to('tablet'){ padding: 1.5em 3em; }
+					@include respond-to('mobile'){ padding: 5em 7em; }
+
+				}
 
 			}
 
@@ -96,9 +103,62 @@
 				padding: 0em 1em;
 
 				line-height: 150%;
-				// position: relative;
 
-				.wrap { @include center-vertically();  }
+				.wrap {
+
+					@include center-vertically();
+					@include respond-to('mobile'){
+
+						@include reset-center-vertically();
+
+					}
+
+				}
+			}
+
+		}
+
+	}
+
+
+	// controls
+	.controls {
+
+		a {
+			color: $grey;
+			text-transform: uppercase;
+			margin-right: 1em;
+			transition: $transition;
+
+			&:after { display: none; }
+			&:before {
+				font-size: 1.5em;
+				position: relative;
+				top: -0.15em;
+				margin-right: 0.5em;
+				transition: $transition;
+				color: $grey;
+				transform: scale3d(1,1,1);
+				opacity: 1;
+			}
+
+			&.-favorite:before { color: $red; }
+			&.-active.-favorite:before  { color: $grey;}
+			&.-message:before { color: $primaryColor; }
+
+			&:hover {
+				&:before {
+					transform: scale3d(1.25,1.25,1.25);
+					opacity: 0.75;
+				}
+			}
+
+			@include respond-to('mobile'){
+
+				display: block;
+				&.-message { margin-top: 1em; }
+				&:before { top: 0.1em; }
+
 			}
 
 		}

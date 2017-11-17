@@ -5,7 +5,15 @@
     <div class="what">
 
         {{#if isProfileView}}
-            _______ viewed your profile
+
+            <div class="profile-wrap"><img class="profile" src="{{programProfileImage}}"></div>
+
+            <div class="action-type">
+
+                <a href="#">{{activity.program.college.name}}</a> viewed your profile
+
+            </div>
+
         {{/if}}
 
         {{#if isUserFavorited}}
@@ -56,6 +64,9 @@
 </div>
 
 <div class="controls">
-    [unfavorite]
-    [message]
+
+    <a href="#0" onclick={{action "favorite"}} class="icon-heart -favorite {{isFavorite}}"> {{favState}} college</a>
+
+    <a href="#0" onclick={{action "message"}} class="icon-paper-plane -message"> message college</a>
+
 </div>

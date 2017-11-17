@@ -23,15 +23,12 @@ export default Component.extend({
 		// Computed: School Image (Note these images were not available in  the source package)
 		this.set('schoolImage',activity.program.image.file_path + activity.program.image.file_name);
 		this.set('profileImage',activity.target_user.user_details.image.file_path + activity.target_user.user_details.image.file_name);
-		// Computed: Date Format
-		let date = new Date(activity.created_at);
-		let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
-		let month = months[date.getMonth()];
-		let day   = date.getDate();
-		let time  = this.formatTime(activity.created_at);
+		this.set('programProfileImage',activity.program.image.file_path + activity.program.image.file_name);
+		this.formatDate();
 
-		this.set('date',month+' '+ day);
-		this.set('time',time);
+
+		// Favs (Not enough info on the DB schema to determine this property)
+		this.set('favState','unfavorite');
 
 		// Action Type
 		this.setupView();
@@ -71,10 +68,28 @@ export default Component.extend({
 
 	},
 
-	formatTime(date) {
-  		var d = new Date(date);
-  		var hh = d.getHours();
-  		var m = d.getMinutes();
+	formatDate(){
+
+		// Split the date
+		var fullDate = this.activity.created_at;
+		var parts = fullDate.split(" ");
+
+		// Computed: Date Format
+		let date = new Date(parts[0]);
+		let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
+		let month = months[date.getMonth()];
+		let day   = date.getDate();
+		let time  = this.formatTime(parts[1]);
+
+		this.set('date',month+' '+ day);
+		this.set('time',time);
+
+	},
+
+	formatTime(time) {
+		var parts = time.split(':');
+		var hh = parts[0];
+		var m = parts[1];
 
   		var dd = "AM";
   		var h = hh;
@@ -88,6 +103,27 @@ export default Component.extend({
 
   		return h + ":" + m + " " + dd;
 
-}
+	},
+
+	actions: {
+
+		favorite(){
+
+			if(!this.isFavorite) {
+				this.set('isFavorite','-active');
+				this.set('favState','favorite');
+			} else {
+				this.set('isFavorite',null);
+				this.set('favState','unfavorite');
+			}
+
+		},
+
+		message(){
+
+			alert("Launch a modal to compose a message");
+
+		}
+	}
 
 });
