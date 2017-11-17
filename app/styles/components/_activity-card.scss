@@ -20,19 +20,35 @@
 	}
 
 	// when
-	.when {
+	.when,
+	.controls {
 
 		color: $grey;
 		font-size: 0.75em;
-		border-bottom: 1px solid $midGrey;
+		font-weight: bold;
 		padding: 1em 1.25em;
+		float: left;
+		width: 100%;
 
 	}
+
+	.when { border-bottom: 1px solid $midGrey; }
+	.controls { border-top: 1px solid $midGrey; }
 
 	// Content
 	.content {
 
+		float: left;
+		width: 100%;
 		padding: 1em;
+
+		// what.
+		.what {
+
+			margin-top: 0.25em;
+			margin-bottom: 1.5em;
+
+		}
 
 		// School
 		.school {
@@ -45,6 +61,8 @@
 			.image {
 
 				@include columns(4,0,0);
+				background-color: $white;
+				border-right: 1px solid $midGrey;
 				img { width: 100%; height: auto; }
 
 			}
@@ -53,7 +71,7 @@
 
 				@include columns(8,0,0);
 
-
+				padding: 0em 1em;
 			}
 
 		}
