@@ -57,6 +57,7 @@
 			background-color: $baseColor;
 			float: left;
 			width: 100%;
+			position: relative;
 
 			.image {
 
@@ -77,6 +78,9 @@
 				padding: 0em 1em;
 				font-size: 0.85em;
 				line-height: 150%;
+				// position: relative;
+
+				.wrap { @include center-vertically();  }
 			}
 
 		}
