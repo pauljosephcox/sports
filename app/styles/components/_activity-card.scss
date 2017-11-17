@@ -1,9 +1,12 @@
 .activity-card {
 
-	background-color: $baseColor;
+	float: left;
+	width: 100%;
+	background-color: $white;
+	border-radius: 0.15em;
+
 	margin-bottom: 1em;
 	padding: 1em;
-	@include columns(12);
 
 	transition: $transition;
 	box-shadow: $shadow;
@@ -14,7 +17,7 @@
 	&:hover {
 
 		box-shadow: $shadowHover;
-		transform: scale3d(1.01,1.05,1.05) translateY(-5px);
+		transform: scale3d(1.01,1.01,1.01) translateY(-5px);
 		z-index: 2;
 
 	}

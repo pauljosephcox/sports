@@ -2,25 +2,18 @@
 // Global Settigns
 // --------------------------------------------------
 
-* {
-	box-sizing: border-box;
+* { box-sizing: border-box; }
+
+.container { @include container() }
+
+.error { color: $errorColor; }
+
+.success { color: $successColor; }
+
+body { background-color: $baseColor; }
+
+section { padding: $space; }
+
+.activities-feed {
+	@include columns(8,2);
 }
-
-.container {
-	@include container()
-}
-
-.error {
-	color: $errorColor; 
-}
-
-.success { 
-	color: $successColor; 
-}
-
-
-.split-main { @include columns(8); }
-
-.split-aside { @include columns(4); }
-
-.wysiwyg { padding: $space 0em; }

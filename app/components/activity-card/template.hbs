@@ -1,2 +1,36 @@
-<h3>Activity Card</h3>
-{{activity.created_at}}
+<div class="when">
+    <span class="{{actionIcon}}"></span> {{activity.created_at}} [Format]</div>
+
+<div class="content">
+
+    <div class="what">
+
+        {{#if isProfileView}}
+            Profile View
+        {{/if}}
+
+        {{#if isUserFavorited}}
+            Favorited
+        {{/if}}
+
+
+    </div>
+
+    <div class="school">
+
+        [img]
+        [school details]
+        <img src="{{school_image}}">
+
+        <p><strong>{{activity.program.college.name}}</strong></p>
+        <p><strong>Location:</strong>{{activity.program.city}},{{activity.program.state}}</p>
+        <p><a href="#">View School Profile</a></p>
+
+    </div>
+
+</div>
+
+<div class="controls">
+    [unfavorite]
+    [message]
+</div>

@@ -63,8 +63,8 @@ export default function() {
             },
             "image": {
                 "id": 34362,
-                "file_path": "file\/images\/lacrosserecruits\/2015\/",
-                "file_name": "154_fitchburg_state_.png"
+                "file_path": "/assets/img/",
+                "file_name": "fitchburg-state-logo.jpg"
             }
         },
         "target_user": {
@@ -124,8 +124,8 @@ export default function() {
                 "sport_info": null,
                 "image": {
                     "id": 84899,
-                    "file_path": "images\/fieldhockeyrecruits\/2017\/9\/",
-                    "file_name": "139_53769_donkey_kong.jpg"
+                    "file_path": "/assets/img/",
+                    "file_name": "Donkey_Kong.jpg"
                 }
             }
         },
@@ -197,8 +197,8 @@ export default function() {
             },
             "image": {
                 "id": 34362,
-                "file_path": "file\/images\/lacrosserecruits\/2015\/",
-                "file_name": "154_fitchburg_state_.png"
+                "file_path": "/assets/img/",
+                "file_name": "fitchburg-state-logo.jpg"
             }
         },
         "target_user": {
@@ -258,8 +258,8 @@ export default function() {
                 "sport_info": null,
                 "image": {
                     "id": 84899,
-                    "file_path": "images\/fieldhockeyrecruits\/2017\/9\/",
-                    "file_name": "139_53769_donkey_kong.jpg"
+                    "file_path": "/assets/img/",
+                    "file_name": "Donkey_Kong.jpg"
                 }
             }
         },
@@ -331,8 +331,8 @@ export default function() {
             },
             "image": {
                 "id": 34362,
-                "file_path": "file\/images\/lacrosserecruits\/2015\/",
-                "file_name": "154_fitchburg_state_.png"
+                "file_path": "/assets/img/",
+                "file_name": "fitchburg-state-logo.jpg"
             }
         },
         "target_user": {
@@ -392,8 +392,8 @@ export default function() {
                 "sport_info": null,
                 "image": {
                     "id": 84899,
-                    "file_path": "images\/fieldhockeyrecruits\/2017\/9\/",
-                    "file_name": "139_53769_donkey_kong.jpg"
+                    "file_path": "/assets/img/",
+                    "file_name": "Donkey_Kong.jpg"
                 }
             }
         },
@@ -476,8 +476,8 @@ export default function() {
             },
             "image": {
                 "id": 34362,
-                "file_path": "file\/images\/lacrosserecruits\/2015\/",
-                "file_name": "154_fitchburg_state_.png"
+                "file_path": "/assets/img/",
+                "file_name": "fitchburg-state-logo.jpg"
             }
         },
         "target_user": {
@@ -537,8 +537,8 @@ export default function() {
                 "sport_info": null,
                 "image": {
                     "id": 84899,
-                    "file_path": "images\/fieldhockeyrecruits\/2017\/9\/",
-                    "file_name": "139_53769_donkey_kong.jpg"
+                    "file_path": "/assets/img/",
+                    "file_name": "Donkey_Kong.jpg"
                 }
             }
         },

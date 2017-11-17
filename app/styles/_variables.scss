@@ -1,22 +1,37 @@
-//
-// Variables
-// --------------------------------------------------
+/**
+ * Main Style Configuration File
+ */
 
-// Fonts
-// -------------------
+$headingFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-$headingFont: 'Trebuchet MS', sans-serif;
-$paragraphFont: 'Helvetica', sans-serif;
-
+$paragraphFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 // Colours
 // -------------------
 
-$primaryColor: #69b5e1;
-$secondaryColor: #9d6ab4;
+$black: #000;
 
-$textColor: #000000;
-$baseColor: #EEEEEE;
+$white: #FFF;
+
+$blue: #34a9de;
+
+$red: #de3859;
+
+$grey: #f1f1f1;
+
+$darkGrey: #494a4a;
+
+
+// Colour Vars
+// -------------------
+
+
+$primaryColor: $blue;
+$secondaryColor: $red;
+
+
+$textColor: $darkGrey;
+$baseColor: $grey;
 
 $socialFacebook: #3B5998;
 $socialTwitter: #00ACED;
@@ -27,10 +42,10 @@ $errorColor: #AA0000;
 $successColor: #00AA00;
 $baseFontSize: 16;
 
-$space: 10em;
+$space: 5em;
 
 $transition: all .5s cubic-bezier(.33,0,.19,1);
-$shadow: 0em 0em 0em rgba(0,0,0,0.1);
+$shadow: 0em 0.05em 0.25em rgba(0, 0, 0, 0.15);
 $shadowHover: 0em 0.5em 1em rgba(0,0,0,0.1);
 
 // Breakpoints
@@ -42,7 +57,7 @@ $breakpoints: (
 	'desktop': (min-width: 1200px),
 );
 
-// Include gutter on outside 
+// Include gutter on outside
 $gutterOnOutside: true;
 
 // Breakpoints Grid Settings
