@@ -21,8 +21,8 @@ export default Component.extend({
 		//-----
 
 		// Computed: School Image (Note these images were not available in  the source package)
-		this.set('school_image',activity.program.image.file_path + activity.program.image.file_name);
-
+		this.set('schoolImage',activity.program.image.file_path + activity.program.image.file_name);
+		this.set('profileImage',activity.target_user.user_details.image.file_path + activity.target_user.user_details.image.file_name);
 		// Computed: Date Format
 		let date = new Date(activity.created_at);
 		let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];

@@ -3,7 +3,7 @@
 	float: left;
 	width: 100%;
 	background-color: $white;
-	border-radius: 0.15em;
+	border-radius: 0.25em;
 	transition: $transition;
 	box-shadow: $shadow;
 	transform: scale3d(1,1,1) translateY(0em);
@@ -41,12 +41,30 @@
 		float: left;
 		width: 100%;
 		padding: 1em;
+		font-size: 0.85em;
 
 		// what.
 		.what {
 
-			margin-top: 0.25em;
-			margin-bottom: 1.5em;
+			// margin-top: 0.25em;
+			margin-bottom: 1em;
+			float: left;
+			width: 100%;
+			position: relative;
+
+
+			.profile-wrap {
+
+				.profile { max-width: 3.5em; border-radius: 200em; }
+
+			}
+
+			.action-type {
+
+				@include center-vertically();
+				left: 4em;
+
+			}
 
 		}
 
@@ -76,7 +94,7 @@
 				@include columns(6.5,0,0);
 
 				padding: 0em 1em;
-				font-size: 0.85em;
+
 				line-height: 150%;
 				// position: relative;
 

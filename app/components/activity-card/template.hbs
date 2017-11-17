@@ -9,7 +9,15 @@
         {{/if}}
 
         {{#if isUserFavorited}}
-            <b>You</b> Favorited ____school____
+
+            <div class="profile-wrap"><img class="profile" src="{{profileImage}}"></div>
+
+            <div class="action-type">
+
+                <b>You</b> favorited <a href="#">{{activity.program.college.name}}</a>
+
+            </div>
+
         {{/if}}
 
 
@@ -19,7 +27,7 @@
 
         <div class="image">
 
-            <div class="wrap"><img src="{{school_image}}"></div>
+            <div class="wrap"><img src="{{schoolImage}}"></div>
 
         </div>
 
